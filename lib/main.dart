@@ -1,5 +1,7 @@
+import 'package:currency_exchange/pages/bottom_nav.dart';
 import 'package:currency_exchange/pages/home.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,11 +13,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  GetMaterialApp(
       title: 'Currency Exchange',
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: BottomNav(),
     );
   }
 }
-

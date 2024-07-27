@@ -6,7 +6,11 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      appBar: AppBar(
+        title: Text("Currency Exchange"),
+        backgroundColor: Colors.blue,
+        centerTitle: true,
+      ),
     );
   }
 }
