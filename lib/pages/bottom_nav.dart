@@ -12,7 +12,6 @@ class BottomNav extends StatefulWidget {
 }
 
 class _BottomNavState extends State<BottomNav> {
-
   var currentIndex = 0.obs;
 
   void changeIndex(int index) {
@@ -34,22 +33,23 @@ class _BottomNavState extends State<BottomNav> {
           items: [
             /// Home
             SalomonBottomBarItem(
-              icon: const Icon(Icons.home),
+              icon: const Icon(Icons.home_outlined),
+              activeIcon: Icon(Icons.home),
               title: const Text("Home"),
-              selectedColor: Colors.purple,
+              selectedColor: Colors.blueAccent,
             ),
 
             /// Exchange
             SalomonBottomBarItem(
               icon: const Icon(Icons.currency_exchange),
               title: const Text("Exchange"),
-              selectedColor: Colors.teal,
+              selectedColor: Colors.green,
             ),
           ],
         ),
       ),
       body: Obx(
-            () => _pages[currentIndex.value],
+        () => _pages[currentIndex.value],
       ),
     );
   }
